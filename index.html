@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Chosen Palette: Neon Glitch (Electric Blue, Vibrant Magenta, Neon Green on Charcoal) -->
-    <!-- Application Structure Plan: تم تصميم الصفحة كتجربة تفاعلية متكاملة تحاكي البوستر. تبدأ بقسم رئيسي (Hero Section) لجذب الانتباه فوراً بالهوية البصرية الغامضة والأنيميشن، يليه قسم تعريفي مباشر بالحدث، ثم قسم يوضح شقي الفعالية (الترفيهي والتنافسي) بشكل بصري جذاب، قسم للتفاصيل العملية (الموعد والمكان)، وأخيراً قسم الحث على التسجيل (CTA). هذا التدفق الخطي يقود الزائر من مرحلة الإثارة إلى المعرفة ثم القرار، مما يزيد من فعالية الدعوة للحدث. -->
-    <!-- Visualization & Content Choices: تم تحويل كل عنصر من دليل التصميم إلى مكون تفاعلي. الهدف: جذب الانتباه -> تقديم المعلومة -> توضيح الأنشطة -> توفير التفاصيل -> دعوة للتسجيل. تم استخدام أنيميشن Glitch على الشعار الرئيسي لترسيخ الهوية البصرية. تم عرض أقسام الفعالية في بطاقات تفاعلية عند المرور عليها. تم استخدام أيقونات Unicode (🎮, 🏆) بدلاً من الصور لسرعة التحميل والحفاظ على الطابع الرقمي البسيط، مع الالتزام بعدم استخدام SVG. تم استخدام خطوط Google Fonts لتتناسب مع الطابع العصري المطلوب. -->
+    <!-- Application Structure Plan: تم تصميم الصفحة كتجربة تفاعلية متكاملة تحاكي البوستر. تبدأ بقسم رئيسي (Hero Section) لجذب الانتباه فوراً بالهوية البصرية الغامضة والأنيميشن، يليه قسم تعريفي مباشر بالحدث، ثم قسم يوضح شقي الفعالية (الترفيهي والتنافسي) بشكل بصري جذاب، قسم للتفاصيل العملية (الموعد والمكان)، وأخيراً قسم الحث على التسجيل (CTA). هذا التدفق الخطي يقود الزائر من مرحلة الإثارة إلى المعرفة ثم القرار، مما يزيد من فعالية الدعوة للحدث. تمت إضافة Modals لعرض تفاصيل الفقرات الترفيهية ومسابقة الـ Problem Solving لزيادة العمق التفاعلي دون إرباك الواجهة الرئيسية. -->
+    <!-- Visualization & Content Choices: تم تحويل كل عنصر من دليل التصميم إلى مكون تفاعلي. الهدف: جذب الانتباه -> تقديم المعلومة -> توضيح الأنشطة -> توفير التفاصيل -> دعوة للتسجيل. تم استخدام أنيميشن Glitch على الشعار الرئيسي لترسيخ الهوية البصرية. تم عرض أقسام الفعالية في بطاقات تفاعلية عند المرور عليها، وعند الضغط على أي بطاقة يظهر Modal تفصيلي خاص بها. تم استخدام أيقونات Unicode بدلاً من الصور لسرعة التحميل، مع الالتزام بعدم استخدام SVG. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <title>CTX - Execute Your Potential</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,6 +36,10 @@
             border-color: #ff00ff;
             box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff inset;
         }
+        .neon-border-blue {
+            border-color: #00ffff;
+            box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff inset;
+        }
         .glitch-container {
             position: relative;
         }
@@ -64,50 +68,10 @@
             animation: glitch-anim-2 2s infinite linear reverse;
         }
         @keyframes glitch-anim-1 {
-            0% { clip: rect(42px, 9999px, 44px, 0); }
-            5% { clip: rect(12px, 9999px, 69px, 0); }
-            10% { clip: rect(35px, 9999px, 83px, 0); }
-            15% { clip: rect(5px, 9999px, 47px, 0); }
-            20% { clip: rect(25px, 9999px, 30px, 0); }
-            25% { clip: rect(17px, 9999px, 98px, 0); }
-            30% { clip: rect(88px, 9999px, 2px, 0); }
-            35% { clip: rect(49px, 9999px, 71px, 0); }
-            40% { clip: rect(21px, 9999px, 75px, 0); }
-            45% { clip: rect(10px, 9999px, 5px, 0); }
-            50% { clip: rect(66px, 9999px, 33px, 0); }
-            55% { clip: rect(3px, 9999px, 90px, 0); }
-            60% { clip: rect(29px, 9999px, 51px, 0); }
-            65% { clip: rect(7px, 9999px, 60px, 0); }
-            70% { clip: rect(81px, 9999px, 38px, 0); }
-            75% { clip: rect(23px, 9999px, 7px, 0); }
-            80% { clip: rect(57px, 9999px, 92px, 0); }
-            85% { clip: rect(13px, 9999px, 41px, 0); }
-            90% { clip: rect(74px, 9999px, 22px, 0); }
-            95% { clip: rect(39px, 9999px, 88px, 0); }
-            100% { clip: rect(1px, 9999px, 56px, 0); }
+            0% { clip: rect(42px, 9999px, 44px, 0); } 5% { clip: rect(12px, 9999px, 69px, 0); } 10% { clip: rect(35px, 9999px, 83px, 0); } 15% { clip: rect(5px, 9999px, 47px, 0); } 20% { clip: rect(25px, 9999px, 30px, 0); } 25% { clip: rect(17px, 9999px, 98px, 0); } 30% { clip: rect(88px, 9999px, 2px, 0); } 35% { clip: rect(49px, 9999px, 71px, 0); } 40% { clip: rect(21px, 9999px, 75px, 0); } 45% { clip: rect(10px, 9999px, 5px, 0); } 50% { clip: rect(66px, 9999px, 33px, 0); } 55% { clip: rect(3px, 9999px, 90px, 0); } 60% { clip: rect(29px, 9999px, 51px, 0); } 65% { clip: rect(7px, 9999px, 60px, 0); } 70% { clip: rect(81px, 9999px, 38px, 0); } 75% { clip: rect(23px, 9999px, 7px, 0); } 80% { clip: rect(57px, 9999px, 92px, 0); } 85% { clip: rect(13px, 9999px, 41px, 0); } 90% { clip: rect(74px, 9999px, 22px, 0); } 95% { clip: rect(39px, 9999px, 88px, 0); } 100% { clip: rect(1px, 9999px, 56px, 0); }
         }
         @keyframes glitch-anim-2 {
-            0% { clip: rect(8px, 9999px, 92px, 0); }
-            5% { clip: rect(99px, 9999px, 3px, 0); }
-            10% { clip: rect(55px, 9999px, 42px, 0); }
-            15% { clip: rect(20px, 9999px, 85px, 0); }
-            20% { clip: rect(45px, 9999px, 63px, 0); }
-            25% { clip: rect(77px, 9999px, 11px, 0); }
-            30% { clip: rect(31px, 9999px, 94px, 0); }
-            35% { clip: rect(86px, 9999px, 28px, 0); }
-            40% { clip: rect(50px, 9999px, 78px, 0); }
-            45% { clip: rect(15px, 9999px, 33px, 0); }
-            50% { clip: rect(61px, 9999px, 58px, 0); }
-            55% { clip: rect(5px, 9999px, 80px, 0); }
-            60% { clip: rect(40px, 9999px, 6px, 0); }
-            65% { clip: rect(70px, 9999px, 25px, 0); }
-            70% { clip: rect(95px, 9999px, 48px, 0); }
-            75% { clip: rect(18px, 9999px, 90px, 0); }
-            80% { clip: rect(52px, 9999px, 14px, 0); }
-            85% { clip: rect(33px, 9999px, 73px, 0); }
-            90% { clip: rect(9px, 9999px, 44px, 0); }
-            95% { clip: rect(68px, 9999px, 37px, 0); }
-            100% { clip: rect(27px, 9999px, 82px, 0); }
+            0% { clip: rect(8px, 9999px, 92px, 0); } 5% { clip: rect(99px, 9999px, 3px, 0); } 10% { clip: rect(55px, 9999px, 42px, 0); } 15% { clip: rect(20px, 9999px, 85px, 0); } 20% { clip: rect(45px, 9999px, 63px, 0); } 25% { clip: rect(77px, 9999px, 11px, 0); } 30% { clip: rect(31px, 9999px, 94px, 0); } 35% { clip: rect(86px, 9999px, 28px, 0); } 40% { clip: rect(50px, 9999px, 78px, 0); } 45% { clip: rect(15px, 9999px, 33px, 0); } 50% { clip: rect(61px, 9999px, 58px, 0); } 55% { clip: rect(5px, 9999px, 80px, 0); } 60% { clip: rect(40px, 9999px, 6px, 0); } 65% { clip: rect(70px, 9999px, 25px, 0); } 70% { clip: rect(95px, 9999px, 48px, 0); } 75% { clip: rect(18px, 9999px, 90px, 0); } 80% { clip: rect(52px, 9999px, 14px, 0); } 85% { clip: rect(33px, 9999px, 73px, 0); } 90% { clip: rect(9px, 9999px, 44px, 0); } 95% { clip: rect(68px, 9999px, 37px, 0); } 100% { clip: rect(27px, 9999px, 82px, 0); }
         }
 
         .blinking-cursor {
@@ -115,9 +79,7 @@
         }
 
         @keyframes blink {
-            50% {
-                opacity: 0;
-            }
+            50% { opacity: 0; }
         }
         
         .card-bg {
@@ -125,7 +87,10 @@
              backdrop-filter: blur(10px);
              -webkit-backdrop-filter: blur(10px);
         }
-
+        
+        .modal-content {
+            max-height: 90vh;
+        }
     </style>
 </head>
 <body class="bg-[#1a1a1d]">
@@ -158,19 +123,19 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">فقرات الفعالية</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                     
-                    <div class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div id="open-entertainment-modal" class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer">
                         <div class="text-6xl mb-4">🎮</div>
                         <h3 class="text-2xl font-bold text-electric-blue mb-3">فقرات برمجية ترفيهية</h3>
                         <p class="text-gray-300">
-                            أنشطة تفاعلية ومسابقات خفيفة تهدف لدمج الطلاب مع مجال البرمجة بطريقة ممتعة ومبتكرة في مساحة مفتوحة ومجهزة بالكامل.
+                            أنشطة تفاعلية ومسابقات خفيفة تهدف لدمج الطلاب مع مجال البرمجة بطريقة ممتعة ومبتكرة. (اضغط لمعرفة التفاصيل)
                         </p>
                     </div>
 
-                    <div class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <div id="open-ps-modal" class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer">
                         <div class="text-6xl mb-4">🏆</div>
                         <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">مسابقة Problem Solving</h3>
                         <p class="text-gray-300">
-                           تحدٍ حقيقي للعقول المبرمجة. 4 فرق، ساعة واحدة من التفكير العميق وكتابة الأكواد لحل مشكلات معقدة والفوز باللقب.
+                           تحدٍ حقيقي للعقول المبرمجة. 4 فرق، ساعة واحدة من التفكير العميق وكتابة الأكواد لحل مشكلات معقدة والفوز باللقب. (اضغط لمعرفة التفاصيل)
                         </p>
                     </div>
                 </div>
@@ -183,7 +148,7 @@
                 <div class="card-bg border border-gray-700 rounded-xl p-8 space-y-8">
                     <div class="flex items-center justify-center flex-col sm:flex-row gap-4">
                         <span class="text-2xl">🗓️</span>
-                        <p class="text-xl"><span class="font-bold text-electric-blue">الموعد:</span> يوم الأربعاء، ٢9 أكتوبر ٢٠٢٥ | من ١١:٠٠ صباحًا حتى ٢:٠٠ ظهرًا</p>
+                        <p class="text-xl"><span class="font-bold text-electric-blue">الموعد:</span> يوم الأربعاء، ٢٩ أكتوبر ٢٠٢٥ | من ١١:٠٠ صباحًا حتى ٣:٠٠ عصرًا</p>
                     </div>
                     <div class="w-3/4 h-px bg-gray-600 mx-auto"></div>
                      <div class="flex items-center justify-center flex-col sm:flex-row gap-4">
@@ -213,11 +178,110 @@
                 </div>
             </div>
         </footer>
-
     </main>
+
+    <!-- Modal for Entertainment Activities -->
+    <div id="entertainment-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
+        <div class="card-bg border-2 neon-border-blue rounded-2xl w-full max-w-4xl modal-content overflow-y-auto p-6 md:p-8 relative">
+            <button id="close-entertainment-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-electric-blue neon-shadow-blue">🎮 الفقرات الترفيهية 🎮</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Dev Genius 🤓</h3>
+                    <p class="text-gray-300 mb-3">لو بتحب الأسئلة السريعة وروح المنافسة، الفقرة دي معمولة ليك! مجموعة من التحديات بين المشاركين… واللي يجاوب أسرع ويجمع أكتر نقاط هو الـ Dev Genius الحقيقي! 👑</p>
+                    <p class="font-bold text-neon-green">🔥 صاحب المركز الأول ليه جايزة قيمة!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Logo Error 🧐</h3>
+                    <p class="text-gray-300 mb-3">فاكر نفسك عندك ذاكرة قوية؟ وبتلاحظ التفاصيل الصغيرة🤔؟ في Logo Error، هنختبر قوة ملاحظتك! هنعرض لك لوجوهات مشهورة لمواقع برمجيه… لكن فيها خطأ بسيط! تقدر تكتشف الخطأ😏؟</p>
+                    <p class="font-bold text-neon-green">🔥 اللي هيلاحظه أول، هو اللي هيكسب!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Error Party 🥳</h3>
+                    <p class="text-gray-300 mb-3">شايف نفسك Coder شاطر؟ تعال نختبر مهارتك! هنعرض لك كود شكله تمام… لكن فيه غلطة صغيرة! هل تقدر تكتشفها قبل الكل؟ 😏</p>
+                    <p class="font-bold text-neon-green">🔥✨ اللي هيحلها أسرع، ليه نقطة… وجايزة كمان!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Card game 🃏</h3>
+                    <p class="text-gray-300 mb-3">فاكر إنك تقدر تفهم الكود بأي شكل، حتى لو مكتوب بإيموجي🤔😂؟ هنعرض لك كود باستخدام إيموجي غامض أو سؤال سريع عشوائي من الكروت. أنت وحظك! 👀 هتعرف تفك الرموز؟</p>
+                    <p class="font-bold text-neon-green">✨ جرب وشوف، يمكن تكون أنت الأذكى والأسرع!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Problem Solving Competition -->
+    <div id="ps-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
+        <div class="card-bg border-2 neon-border-magenta rounded-2xl w-full max-w-5xl modal-content overflow-y-auto p-6 md:p-8 relative">
+            <button id="close-ps-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vibrant-magenta neon-shadow-magenta">🏆 مسابقة Problem Solving 🏆</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <!-- Left Column: Rules & Details -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-electric-blue mb-4">قواعد وتفاصيل المسابقة</h3>
+                        <ul class="space-y-3 text-lg text-gray-200">
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span> <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وفريق بلون مميز.</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span> <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span> <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span> <span><b>الزمن:</b> ساعة واحدة فقط!</span></li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="text-2xl font-bold text-electric-blue mb-4 mt-8">منظمو المسابقة (Admins)</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
+                            <div>
+                                <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+عبدالرحمن" alt="Admin 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta">
+                                <h4 class="text-xl font-bold">عبدالرحمن أشرف</h4>
+                            </div>
+                            <div>
+                                <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+تسبيح" alt="Admin 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta">
+                                <h4 class="text-xl font-bold">تسبيح محمود</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Referees -->
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Referees Committee) ⚖️</h3>
+                    <div class="space-y-6">
+                        <div class="text-center">
+                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
+                             <h4 class="text-xl font-bold">د. [اسم الدكتور الأول]</h4>
+                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
+                        </div>
+                         <div class="text-center">
+                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
+                             <h4 class="text-xl font-bold">د. [اسم الدكتور الثاني]</h4>
+                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
+                        </div>
+                         <div class="text-center">
+                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
+                             <h4 class="text-xl font-bold">د. [اسم الدكتور الثالث]</h4>
+                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration CTA -->
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+                 <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
+                 <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
+                 <a href="#" target="_blank" class="inline-block bg-electric-blue text-black font-bold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
+                    سجل فريقك الآن!
+                </a>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll for anchor links
             const scrollBtn = document.getElementById('scroll-down-btn');
             if (scrollBtn) {
                 scrollBtn.addEventListener('click', function(e) {
@@ -227,7 +291,39 @@
                     });
                 });
             }
+
+            // Modal functionality
+            const entertainmentModal = document.getElementById('entertainment-modal');
+            const openEntertainmentBtn = document.getElementById('open-entertainment-modal');
+            const closeEntertainmentBtn = document.getElementById('close-entertainment-modal');
+            
+            const psModal = document.getElementById('ps-modal');
+            const openPsBtn = document.getElementById('open-ps-modal');
+            const closePsBtn = document.getElementById('close-ps-modal');
+
+            const openModal = (modal) => {
+                if (modal) modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeModal = (modal) => {
+                if (modal) modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            };
+
+            if (openEntertainmentBtn) openEntertainmentBtn.addEventListener('click', () => openModal(entertainmentModal));
+            if (closeEntertainmentBtn) closeEntertainmentBtn.addEventListener('click', () => closeModal(entertainmentModal));
+            if (entertainmentModal) entertainmentModal.addEventListener('click', (e) => {
+                if(e.target === entertainmentModal) closeModal(entertainmentModal);
+            });
+
+            if (openPsBtn) openPsBtn.addEventListener('click', () => openModal(psModal));
+            if (closePsBtn) closePsBtn.addEventListener('click', () => closeModal(psModal));
+            if (psModal) psModal.addEventListener('click', (e) => {
+                if(e.target === psModal) closeModal(psModal);
+            });
         });
     </script>
 </body>
 </html>
+
