@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Chosen Palette: Neon Glitch (Electric Blue, Vibrant Magenta, Neon Green on Charcoal) -->
-    <!-- Application Structure Plan: تم تصميم الصفحة كتجربة تفاعلية متكاملة تحاكي البوستر. تبدأ بقسم رئيسي (Hero Section) لجذب الانتباه فوراً بالهوية البصرية الغامضة والأنيميشن، يليه قسم تعريفي مباشر بالحدث، ثم قسم يوضح شقي الفعالية (الترفيهي والتنافسي) بشكل بصري جذاب، قسم للتفاصيل العملية (الموعد والمكان)، وأخيراً قسم الحث على التسجيل (CTA). هذا التدفق الخطي يقود الزائر من مرحلة الإثارة إلى المعرفة ثم القرار، مما يزيد من فعالية الدعوة للحدث. تمت إضافة Modals لعرض تفاصيل الفقرات الترفيهية ومسابقة الـ Problem Solving لزيادة العمق التفاعلي دون إرباك الواجهة الرئيسية. -->
-    <!-- Visualization & Content Choices: تم تحويل كل عنصر من دليل التصميم إلى مكون تفاعلي. الهدف: جذب الانتباه -> تقديم المعلومة -> توضيح الأنشطة -> توفير التفاصيل -> دعوة للتسجيل. تم استخدام أنيميشن Glitch على الشعار الرئيسي لترسيخ الهوية البصرية. تم عرض أقسام الفعالية في بطاقات تفاعلية عند المرور عليها، وعند الضغط على أي بطاقة يظهر Modal تفصيلي خاص بها. تم استخدام أيقونات Unicode بدلاً من الصور لسرعة التحميل، مع الالتزام بعدم استخدام SVG. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-    <title>CTX - Execute Your Potential</title>
+    <!-- Chosen Palette: Neon Glitch (Electric Blue, Vibrant Magenta, Neon Green on Charcoal) --><!-- Application Structure Plan: تم تصميم الصفحة كتجربة تفاعلية متكاملة تحاكي البوستر. تبدأ بقسم رئيسي (Hero Section) لجذب الانتباه فوراً بالهوية البصرية الغامضة والأنيميشن، يليه قسم تعريفي مباشر بالحدث، ثم قسم يوضح شقي الفعالية (الترفيهي والتنافسي) بشكل بصري جذاب، قسم للتفاصيل العملية (الموعد والمكان)، وأخيراً قسم الحث على التسجيل (CTA). هذا التدفق الخطي يقود الزائر من مرحلة الإثارة إلى المعرفة ثم القرار، مما يزيد من فعالية الدعوة للحدث. تمت إضافة Modals لعرض تفاصيل الفقرات الترفيهية ومسابقة الـ Problem Solving لزيادة العمق التفاعلي دون إرباك الواجهة الرئيسية. --><!-- Visualization & Content Choices: تم تحويل كل عنصر من دليل التصميم إلى مكون تفاعلي. الهدف: جذب الانتباه -> تقديم المعلومة -> توضيح الأنشطة -> توفير التفاصيل -> دعوة للتسجيل. تم استخدام أنيميشن Glitch على الشعار الرئيسي لترسيخ الهوية البصرية. تم عرض أقسام الفعالية في بطاقات تفاعلية عند المرور عليها، وعند الضغط على أي بطاقة يظهر Modal تفصيلي خاص بها. تم استخدام أيقونات Unicode بدلاً من الصور لسرعة التحميل، مع الالتزام بعدم استخدام SVG. --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><title>CTX - Execute Your Potential</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,14 +19,17 @@
             font-family: 'Orbitron', sans-serif;
         }
         .text-electric-blue { color: #00ffff; }
+        .bg-electric-blue { background-color: #00ffff; }
         .text-vibrant-magenta { color: #ff00ff; }
         .text-neon-green { color: #39ff14; }
 
         .neon-shadow-blue {
-            text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+            /* Reduced glow intensity */
+            text-shadow: 0 0 3px #00ffff, 0 0 6px #00ffff, 0 0 12px #00ffff;
         }
         .neon-shadow-magenta {
-            text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+            /* Reduced glow intensity */
+            text-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff, 0 0 12px #ff00ff;
         }
         .neon-border-magenta {
             border-color: #ff00ff;
@@ -162,16 +161,9 @@
 
         <footer id="register" class="py-20 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20">
             <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">جاهز للتحدي؟</h2>
-                <p class="text-gray-300 mb-8">امسح الكود أو اضغط على الزر لتكون جزءاً من الحدث!</p>
-                <div class="flex justify-center mb-8">
-                    <div class="bg-white p-2 rounded-lg">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://helwan.edu.eg/science/" alt="QR Code for registration" class="w-36 h-36">
-                    </div>
-                </div>
-                <a href="https://helwan.edu.eg/science/" target="_blank" class="inline-block bg-vibrant-magenta text-white font-bold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #ff00ff;">
-                    سجل الآن!
-                </a>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">نراكم هناك!</h2>
+                <p class="text-gray-300 mb-8">استعدوا ليوم مليء بالتحدي والمرح في CTX.</p>
+                
                 <div class="mt-12 text-center text-gray-500">
                     <p>تنظيم: أسرة NASA - كلية العلوم</p>
                     <p class="mt-2 text-sm">&copy; 2025 CTX Event. All rights reserved.</p>
@@ -180,8 +172,7 @@
         </footer>
     </main>
 
-    <!-- Modal for Entertainment Activities -->
-    <div id="entertainment-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
+    <!-- Modal for Entertainment Activities --><div id="entertainment-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
         <div class="card-bg border-2 neon-border-blue rounded-2xl w-full max-w-4xl modal-content overflow-y-auto p-6 md:p-8 relative">
             <button id="close-entertainment-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-electric-blue neon-shadow-blue">🎮 الفقرات الترفيهية 🎮</h2>
@@ -210,20 +201,24 @@
         </div>
     </div>
     
-    <!-- Modal for Problem Solving Competition -->
-    <div id="ps-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
+    <!-- Modal for Problem Solving Competition --><div id="ps-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
         <div class="card-bg border-2 neon-border-magenta rounded-2xl w-full max-w-5xl modal-content overflow-y-auto p-6 md:p-8 relative">
             <button id="close-ps-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vibrant-magenta neon-shadow-magenta">🏆 مسابقة Problem Solving 🏆</h2>
             
+            <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg" style="box-shadow: 0 0 10px #39ff14;">
+                <p class="text-lg md:text-xl font-bold text-neon-green">
+                    ⚠️ هذه المسابقة مخصصة لطلاب كلية العلوم بجامعة حلوان فقط! ⚠️
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                <!-- Left Column: Rules & Details -->
-                <div class="space-y-6">
+                <!-- Left Column: Rules & Details --><div class="space-y-6">
                     <div>
                         <h3 class="text-2xl font-bold text-electric-blue mb-4">قواعد وتفاصيل المسابقة</h3>
                         <ul class="space-y-3 text-lg text-gray-200">
                             <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span> <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وفريق بلون مميز.</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وكل فريق بلون مميز.</span></li>
                             <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span> <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span></li>
                             <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span> <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span></li>
                             <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span> <span><b>الزمن:</b> ساعة واحدة فقط!</span></li>
@@ -233,45 +228,43 @@
                         <h3 class="text-2xl font-bold text-electric-blue mb-4 mt-8">منظمو المسابقة (Admins)</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
                             <div>
-                                <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+عبدالرحمن" alt="Admin 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta">
-                                <h4 class="text-xl font-bold">عبدالرحمن أشرف</h4>
+                                <img src="https://i.postimg.cc/HxJktKWx/Whats-App-Image-2025-10-21-at-00-40-47-40edd2b7.jpg" alt="Admin 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
+                                <h4 class="text-xl font-bold">Abdelrahman Ashraf</h4>
                             </div>
                             <div>
-                                <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+تسبيح" alt="Admin 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta">
-                                <h4 class="text-xl font-bold">تسبيح محمود</h4>
+                                <img src="https://i.postimg.cc/jqwXFQMw/Whats-App-Image-2025-09-22-at-17-00-48-c9f0bfb6.jpg" alt="Admin 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
+                                <h4 class="text-xl font-bold">Tasbeeh Mahmoud</h4>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Referees -->
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Referees Committee) ⚖️</h3>
+                <!-- Right Column: Referees --><div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee) ⚖️</h3>
                     <div class="space-y-6">
                         <div class="text-center">
-                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold">د. [اسم الدكتور الأول]</h4>
+                             <img src="https://i.postimg.cc/m2k8yyCq/Whats-App-Image-2025-10-20-at-22-40-41-e61d66c3.jpg" alt="DR. Ahmed Mahmoud" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
+                             <h4 class="text-xl font-bold">DR. Ahmed Mahmoud</h4>
                              <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
                         </div>
                          <div class="text-center">
-                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold">د. [اسم الدكتور الثاني]</h4>
+                             <img src="https://i.postimg.cc/gjXLnjL4/Whats-App-Image-2025-10-20-at-23-17-49-ff5ebfed.jpg" alt="DR. Islam Yassin" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
+                             <h4 class="text-xl font-bold">DR. Islam Yassin</h4>
                              <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
                         </div>
                          <div class="text-center">
                              <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold">د. [اسم الدكتور الثالث]</h4>
+                             <h4 class="text-xl font-bold">DR. [Third Doctor's Name]</h4>
                              <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Registration CTA -->
-            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
+            <!-- Registration CTA --><div class="mt-12 pt-8 border-t border-gray-700 text-center">
                  <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
                  <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
-                 <a href="#" target="_blank" class="inline-block bg-electric-blue text-black font-bold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
+                 <a href="#" target="_blank" class="inline-block bg-electric-blue text-gray-900 font-extrabold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
                     سجل فريقك الآن!
                 </a>
             </div>
