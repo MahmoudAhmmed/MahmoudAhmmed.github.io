@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Chosen Palette: Neon Glitch (Electric Blue, Vibrant Magenta, Neon Green on Charcoal) --><!-- Application Structure Plan: تم تحويل الموقع من صفحة واحدة بنافذتين منبثقتين إلى موقع متعدد الصفحات (3 صفحات) لتحسين تجربة المستخدم وفصل المحتوى. الصفحة الرئيسية (index.html) تعمل كبوابة تعريفية للفعالية، مع روابط واضحة للصفحات الداخلية. الصفحات الداخلية (entertainment.html و competition.html) تقدم تفاصيل كل قسم بشكل مستقل ومنظم، مع وجود زر عودة واضح للصفحة الرئيسية، مما يسهل التنقل. --><!-- Visualization & Content Choices: تم الحفاظ على الهوية البصرية في جميع الصفحات. تم استبدال عناصر div القابلة للنقر بعناصر <a> لتحقيق التنقل الفعلي بين الصفحات بدلاً من إظهار النوافذ المنبثقة. تم إزالة كود JavaScript الخاص بالـ Modals لأنه لم يعد مطلوباً. --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><title>CTX - Execute Your Potential</title>
+    <title>CTX - Execute Your Potential</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,6 +94,12 @@
 
     <main class="relative z-10">
         <header class="min-h-screen flex flex-col items-center justify-center text-center p-4">
+            
+            <nav class="absolute top-0 left-0 right-0 z-20 flex justify-center items-center p-6 space-x-8 space-x-reverse">
+                <a href="index.html" class="text-lg font-bold text-white hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
+                <a href="entertainment.html" class="text-lg font-bold text-white hover:text-electric-blue transition-colors duration-300">الفقرات الترفيهية</a>
+                <a href="competition.html" class="text-lg font-bold text-white hover:text-vibrant-magenta transition-colors duration-300">مسابقة P.S</a>
+            </nav>
             <div class="glitch-container">
                 <h1 id="glitch-logo" class="glitch-text text-7xl md:text-9xl font-orbitron font-bold text-electric-blue neon-shadow-blue uppercase tracking-widest" data-text="CTX">CTX</h1>
             </div>
@@ -184,4 +190,3 @@
     </script>
 </body>
 </html>
-
