@@ -1,322 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Chosen Palette: Neon Glitch (Electric Blue, Vibrant Magenta, Neon Green on Charcoal) --><!-- Application Structure Plan: تم تصميم الصفحة كتجربة تفاعلية متكاملة تحاكي البوستر. تبدأ بقسم رئيسي (Hero Section) لجذب الانتباه فوراً بالهوية البصرية الغامضة والأنيميشن، يليه قسم تعريفي مباشر بالحدث، ثم قسم يوضح شقي الفعالية (الترفيهي والتنافسي) بشكل بصري جذاب، قسم للتفاصيل العملية (الموعد والمكان)، وأخيراً قسم الحث على التسجيل (CTA). هذا التدفق الخطي يقود الزائر من مرحلة الإثارة إلى المعرفة ثم القرار، مما يزيد من فعالية الدعوة للحدث. تمت إضافة Modals لعرض تفاصيل الفقرات الترفيهية ومسابقة الـ Problem Solving لزيادة العمق التفاعلي دون إرباك الواجهة الرئيسية. --><!-- Visualization & Content Choices: تم تحويل كل عنصر من دليل التصميم إلى مكون تفاعلي. الهدف: جذب الانتباه -> تقديم المعلومة -> توضيح الأنشطة -> توفير التفاصيل -> دعوة للتسجيل. تم استخدام أنيميشن Glitch على الشعار الرئيسي لترسيخ الهوية البصرية. تم عرض أقسام الفعالية في بطاقات تفاعلية عند المرور عليها، وعند الضغط على أي بطاقة يظهر Modal تفصيلي خاص بها. تم استخدام أيقونات Unicode بدلاً من الصور لسرعة التحميل، مع الالتزام بعدم استخدام SVG. --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><title>CTX - Execute Your Potential</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #1a1a1d;
-            color: #f0f0f0;
-            font-family: 'Cairo', sans-serif;
-            overflow-x: hidden;
-        }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        .text-electric-blue { color: #00ffff; }
-        .bg-electric-blue { background-color: #00ffff; }
-        .text-vibrant-magenta { color: #ff00ff; }
-        .text-neon-green { color: #39ff14; }
-
-        .neon-shadow-blue {
-            /* Reduced glow intensity */
-            text-shadow: 0 0 3px #00ffff, 0 0 6px #00ffff, 0 0 12px #00ffff;
-        }
-        .neon-shadow-magenta {
-            /* Reduced glow intensity */
-            text-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff, 0 0 12px #ff00ff;
-        }
-        .neon-border-magenta {
-            border-color: #ff00ff;
-            box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff inset;
-        }
-        .neon-border-blue {
-            border-color: #00ffff;
-            box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff inset;
-        }
-        .glitch-container {
-            position: relative;
-        }
-        .glitch-text {
-            position: relative;
-            z-index: 1;
-        }
-        .glitch-text::before, .glitch-text::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #1a1a1d;
-            overflow: hidden;
-        }
-        .glitch-text::before {
-            left: 2px;
-            text-shadow: -2px 0 #ff00ff;
-            animation: glitch-anim-1 2.5s infinite linear reverse;
-        }
-        .glitch-text::after {
-            left: -2px;
-            text-shadow: -2px 0 #00ffff, 2px 2px #ff00ff;
-            animation: glitch-anim-2 2s infinite linear reverse;
-        }
-        @keyframes glitch-anim-1 {
-            0% { clip: rect(42px, 9999px, 44px, 0); } 5% { clip: rect(12px, 9999px, 69px, 0); } 10% { clip: rect(35px, 9999px, 83px, 0); } 15% { clip: rect(5px, 9999px, 47px, 0); } 20% { clip: rect(25px, 9999px, 30px, 0); } 25% { clip: rect(17px, 9999px, 98px, 0); } 30% { clip: rect(88px, 9999px, 2px, 0); } 35% { clip: rect(49px, 9999px, 71px, 0); } 40% { clip: rect(21px, 9999px, 75px, 0); } 45% { clip: rect(10px, 9999px, 5px, 0); } 50% { clip: rect(66px, 9999px, 33px, 0); } 55% { clip: rect(3px, 9999px, 90px, 0); } 60% { clip: rect(29px, 9999px, 51px, 0); } 65% { clip: rect(7px, 9999px, 60px, 0); } 70% { clip: rect(81px, 9999px, 38px, 0); } 75% { clip: rect(23px, 9999px, 7px, 0); } 80% { clip: rect(57px, 9999px, 92px, 0); } 85% { clip: rect(13px, 9999px, 41px, 0); } 90% { clip: rect(74px, 9999px, 22px, 0); } 95% { clip: rect(39px, 9999px, 88px, 0); } 100% { clip: rect(1px, 9999px, 56px, 0); }
-        }
-        @keyframes glitch-anim-2 {
-            0% { clip: rect(8px, 9999px, 92px, 0); } 5% { clip: rect(99px, 9999px, 3px, 0); } 10% { clip: rect(55px, 9999px, 42px, 0); } 15% { clip: rect(20px, 9999px, 85px, 0); } 20% { clip: rect(45px, 9999px, 63px, 0); } 25% { clip: rect(77px, 9999px, 11px, 0); } 30% { clip: rect(31px, 9999px, 94px, 0); } 35% { clip: rect(86px, 9999px, 28px, 0); } 40% { clip: rect(50px, 9999px, 78px, 0); } 45% { clip: rect(15px, 9999px, 33px, 0); } 50% { clip: rect(61px, 9999px, 58px, 0); } 55% { clip: rect(5px, 9999px, 80px, 0); } 60% { clip: rect(40px, 9999px, 6px, 0); } 65% { clip: rect(70px, 9999px, 25px, 0); } 70% { clip: rect(95px, 9999px, 48px, 0); } 75% { clip: rect(18px, 9999px, 90px, 0); } 80% { clip: rect(52px, 9999px, 14px, 0); } 85% { clip: rect(33px, 9999px, 73px, 0); } 90% { clip: rect(9px, 9999px, 44px, 0); } 95% { clip: rect(68px, 9999px, 37px, 0); } 100% { clip: rect(27px, 9999px, 82px, 0); }
-        }
-
-        .blinking-cursor {
-            animation: blink 1s step-end infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-        
-        .card-bg {
-             background-color: rgba(44, 44, 52, 0.4);
-             backdrop-filter: blur(10px);
-             -webkit-backdrop-filter: blur(10px);
-        }
-        
-        .modal-content {
-            max-height: 90vh;
-        }
-    </style>
-</head>
-<body class="bg-[#1a1a1d]">
-
-    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;"></div>
-
-    <main class="relative z-10">
-        <header class="min-h-screen flex flex-col items-center justify-center text-center p-4">
-            <div class="glitch-container">
-                <h1 id="glitch-logo" class="glitch-text text-7xl md:text-9xl font-orbitron font-bold text-electric-blue neon-shadow-blue uppercase tracking-widest" data-text="CTX">CTX</h1>
-            </div>
-            <p class="mt-4 text-lg md:text-2xl text-white tracking-wider">"Execute Your Potential"<span class="blinking-cursor text-neon-green font-bold">_</span></p>
-            <p class="mt-8 text-base md:text-lg text-gray-400">تقدمه لكم لجنة البرمجة بأسرة NASA - كلية العلوم جامعة حلوان</p>
-            <a href="#about" id="scroll-down-btn" class="mt-12 animate-bounce">
-                <svg class="w-8 h-8 text-vibrant-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </a>
-        </header>
-
-        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">ما هو <span class="text-electric-blue font-orbitron">CTX</span>؟</h2>
-                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
-                    CTX هو أكثر من مجرد فعالية، إنه يوم كامل يجمع بين متعة البرمجة وحماس المنافسة. سواء كنت مبتدئاً ترغب في استكشاف عالم الأكواد بطريقة ترفيهية، أو محترفاً تسعى لإثبات قدراتك في حل المشكلات المعقدة، ستجد مكانك بيننا. استعد لتنفيذ إمكانياتك الكامنة!
-                </p>
-            </div>
-        </section>
-
-        <section id="activities" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">فقرات الفعالية</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    
-                    <div id="open-entertainment-modal" class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer">
-                        <div class="text-6xl mb-4">🎮</div>
-                        <h3 class="text-2xl font-bold text-electric-blue mb-3">فقرات برمجية ترفيهية</h3>
-                        <p class="text-gray-300">
-                            أنشطة تفاعلية ومسابقات خفيفة تهدف لدمج الطلاب مع مجال البرمجة بطريقة ممتعة ومبتكرة. (اضغط لمعرفة التفاصيل)
-                        </p>
-                    </div>
-
-                    <div id="open-ps-modal" class="card-bg border-2 neon-border-magenta rounded-xl p-8 text-center transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer">
-                        <div class="text-6xl mb-4">🏆</div>
-                        <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">مسابقة Problem Solving</h3>
-                        <p class="text-gray-300">
-                           تحدٍ حقيقي للعقول المبرمجة. 4 فرق، ساعة واحدة من التفكير العميق وكتابة الأكواد لحل مشكلات معقدة والفوز باللقب. (اضغط لمعرفة التفاصيل)
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="details" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12">التفاصيل والمعلومات</h2>
-                <div class="card-bg border border-gray-700 rounded-xl p-8 space-y-8">
-                    <div class="flex items-center justify-center flex-col sm:flex-row gap-4">
-                        <span class="text-2xl">🗓️</span>
-                        <p class="text-xl"><span class="font-bold text-electric-blue">الموعد:</span> يوم الأربعاء، ٢٩ أكتوبر ٢٠٢٥ | من ١١:٠٠ صباحًا حتى ٣:٠٠ عصرًا</p>
-                    </div>
-                    <div class="w-3/4 h-px bg-gray-600 mx-auto"></div>
-                     <div class="flex items-center justify-center flex-col sm:flex-row gap-4">
-                        <span class="text-2xl">📍</span>
-                        <p class="text-xl"><span class="font-bold text-vibrant-magenta">المكان:</span> كلية العلوم - جامعة حلوان</p>
-                    </div>
-                     <p class="text-gray-400 text-sm">(الفقرات الترفيهية أمام شؤون الطلبة، والمسابقة في غرفة المعيدين بقسم الرياضيات)</p>
-                </div>
-            </div>
-        </section>
-
-        <footer id="register" class="py-20 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">نراكم هناك!</h2>
-                <p class="text-gray-300 mb-8">استعدوا ليوم مليء بالتحدي والمرح في CTX.</p>
-                
-                <div class="mt-12 text-center text-gray-500">
-                    <p>تنظيم: أسرة NASA - كلية العلوم</p>
-                    <p class="mt-2 text-sm">&copy; 2025 CTX Event. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- Modal for Entertainment Activities --><div id="entertainment-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
-        <div class="card-bg border-2 neon-border-blue rounded-2xl w-full max-w-4xl modal-content overflow-y-auto p-6 md:p-8 relative">
-            <button id="close-entertainment-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-electric-blue neon-shadow-blue">🎮 الفقرات الترفيهية 🎮</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Dev Genius 🤓</h3>
-                    <p class="text-gray-300 mb-3">لو بتحب الأسئلة السريعة وروح المنافسة، الفقرة دي معمولة ليك! مجموعة من التحديات بين المشاركين… واللي يجاوب أسرع ويجمع أكتر نقاط هو الـ Dev Genius الحقيقي! 👑</p>
-                    <p class="font-bold text-neon-green">🔥 صاحب المركز الأول ليه جايزة قيمة!</p>
-                </div>
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Logo Error 🧐</h3>
-                    <p class="text-gray-300 mb-3">فاكر نفسك عندك ذاكرة قوية؟ وبتلاحظ التفاصيل الصغيرة🤔؟ في Logo Error، هنختبر قوة ملاحظتك! هنعرض لك لوجوهات مشهورة لمواقع برمجيه… لكن فيها خطأ بسيط! تقدر تكتشف الخطأ😏؟</p>
-                    <p class="font-bold text-neon-green">🔥 اللي هيلاحظه أول، هو اللي هيكسب!</p>
-                </div>
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Error Party 🥳</h3>
-                    <p class="text-gray-300 mb-3">شايف نفسك Coder شاطر؟ تعال نختبر مهارتك! هنعرض لك كود شكله تمام… لكن فيه غلطة صغيرة! هل تقدر تكتشفها قبل الكل؟ 😏</p>
-                    <p class="font-bold text-neon-green">🔥✨ اللي هيحلها أسرع، ليه نقطة… وجايزة كمان!</p>
-                </div>
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Card game 🃏</h3>
-                    <p class="text-gray-300 mb-3">فاكر إنك تقدر تفهم الكود بأي شكل، حتى لو مكتوب بإيموجي🤔😂؟ هنعرض لك كود باستخدام إيموجي غامض أو سؤال سريع عشوائي من الكروت. أنت وحظك! 👀 هتعرف تفك الرموز؟</p>
-                    <p class="font-bold text-neon-green">✨ جرب وشوف، يمكن تكون أنت الأذكى والأسرع!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Modal for Problem Solving Competition --><div id="ps-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-opacity duration-300">
-        <div class="card-bg border-2 neon-border-magenta rounded-2xl w-full max-w-5xl modal-content overflow-y-auto p-6 md:p-8 relative">
-            <button id="close-ps-modal" class="absolute top-4 left-4 text-white text-4xl font-bold leading-none">&larr;</button>
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vibrant-magenta neon-shadow-magenta">🏆 مسابقة Problem Solving 🏆</h2>
-            
-            <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg" style="box-shadow: 0 0 10px #39ff14;">
-                <p class="text-lg md:text-xl font-bold text-neon-green">
-                    ⚠️ هذه المسابقة مخصصة لطلاب كلية العلوم بجامعة حلوان فقط! ⚠️
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                <!-- Left Column: Rules & Details --><div class="space-y-6">
-                    <div>
-                        <h3 class="text-2xl font-bold text-electric-blue mb-4">قواعد وتفاصيل المسابقة</h3>
-                        <ul class="space-y-3 text-lg text-gray-200">
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span> <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وكل فريق بلون مميز.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span> <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span> <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span> <span><b>الزمن:</b> ساعة واحدة فقط!</span></li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 class="text-2xl font-bold text-electric-blue mb-4 mt-8">منظمو المسابقة (Admins)</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
-                            <div>
-                                <img src="https://i.postimg.cc/HxJktKWx/Whats-App-Image-2025-10-21-at-00-40-47-40edd2b7.jpg" alt="Admin 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
-                                <h4 class="text-xl font-bold">Abdelrahman Ashraf</h4>
-                            </div>
-                            <div>
-                                <img src="https://i.postimg.cc/jqwXFQMw/Whats-App-Image-2025-09-22-at-17-00-48-c9f0bfb6.jpg" alt="Admin 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
-                                <h4 class="text-xl font-bold">Tasbeeh Mahmoud</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Referees --><div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee) ⚖️</h3>
-                    <div class="space-y-6">
-                        <div class="text-center">
-                             <img src="https://i.postimg.cc/m2k8yyCq/Whats-App-Image-2025-10-20-at-22-40-41-e61d66c3.jpg" alt="DR. Ahmed Mahmoud" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold">DR. Ahmed Mahmoud</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                         <div class="text-center">
-                             <img src="https://i.postimg.cc/gjXLnjL4/Whats-App-Image-2025-10-20-at-23-17-49-ff5ebfed.jpg" alt="DR. Islam Yassin" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold">DR. Islam Yassin</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                         <div class="text-center">
-                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold">DR. [Third Doctor's Name]</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Registration CTA --><div class="mt-12 pt-8 border-t border-gray-700 text-center">
-                 <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
-                 <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
-                 <a href="#" target="_blank" class="inline-block bg-electric-blue text-gray-900 font-extrabold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
-                    سجل فريقك الآن!
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scroll for anchor links
-            const scrollBtn = document.getElementById('scroll-down-btn');
-            if (scrollBtn) {
-                scrollBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            }
-
-            // Modal functionality
-            const entertainmentModal = document.getElementById('entertainment-modal');
-            const openEntertainmentBtn = document.getElementById('open-entertainment-modal');
-            const closeEntertainmentBtn = document.getElementById('close-entertainment-modal');
-            
-            const psModal = document.getElementById('ps-modal');
-            const openPsBtn = document.getElementById('open-ps-modal');
-            const closePsBtn = document.getElementById('close-ps-modal');
-
-            const openModal = (modal) => {
-                if (modal) modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            };
-
-            const closeModal = (modal) => {
-                if (modal) modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            };
-
-            if (openEntertainmentBtn) openEntertainmentBtn.addEventListener('click', () => openModal(entertainmentModal));
-            if (closeEntertainmentBtn) closeEntertainmentBtn.addEventListener('click', () => closeModal(entertainmentModal));
-            if (entertainmentModal) entertainmentModal.addEventListener('click', (e) => {
-                if(e.target === entertainmentModal) closeModal(entertainmentModal);
-            });
-
-            if (openPsBtn) openPsBtn.addEventListener('click', () => openModal(psModal));
-            if (closePsBtn) closePsBtn.addEventListener('click', () => closeModal(psModal));
-            if (psModal) psModal.addEventListener('click', (e) => {
-                if(e.target === psModal) closeModal(psModal);
-            });
-        });
-    </script>
-</body>
-</html>
-
