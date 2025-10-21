@@ -1,114 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTX - مسابقة Problem Solving</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #1a1a1d;
-            color: #f0f0f0;
-            font-family: 'Cairo', sans-serif;
-            overflow-x: hidden;
-        }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        .text-electric-blue { color: #00ffff; }
-        .bg-electric-blue { background-color: #00ffff; }
-        .text-vibrant-magenta { color: #ff00ff; }
-        .text-neon-green { color: #39ff14; }
-        .neon-shadow-magenta {
-            text-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff, 0 0 12px #ff00ff;
-        }
-        .card-bg {
-             background-color: rgba(44, 44, 52, 0.4);
-             backdrop-filter: blur(10px);
-             -webkit-backdrop-filter: blur(10px);
-        }
-    </style>
-</head>
-<body class="bg-[#1a1a1d]">
-
-    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;"></div>
-
-    <main class="relative z-10 p-6 md:p-8">
-        
-        <nav class="w-full flex justify-center items-center pb-6 space-x-8 space-x-reverse border-b border-gray-700">
-             <a href="index.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
-             <a href="entertainment.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الفقرات الترفيهية</a>
-             <a href="competition.html" class="text-lg font-bold text-gray-300 hover:text-vibrant-magenta transition-colors duration-300">مسابقة P.S</a>
-        </nav>
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-8 text-vibrant-magenta neon-shadow-magenta">🏆 مسابقة Problem Solving 🏆</h2>
-            
-            <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg" style="box-shadow: 0 0 10px #39ff14;">
-                <p class="text-lg md:text-xl font-bold text-neon-green">
-                    ⚠️ هذه المسابقة مخصصة لطلاب كلية العلوم بجامعة حلوان فقط! ⚠️
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-2xl font-bold text-electric-blue mb-4">قواعد وتفاصيل المسابقة</h3>
-                        <ul class="space-y-3 text-lg text-gray-200">
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span> <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وكل فريق بلون مميز.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span> <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span> <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span> <span><b>الزمن:</b> ساعة واحدة فقط!</span></li>
-                        </ul>
-                    </div>
-                     <div>
-                        <h3 class="text-2xl font-bold text-electric-blue mb-4 mt-8">منظمو المسابقة (Admins)</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-center">
-                            <div>
-                                <img src="https://i.postimg.cc/HxJktKWx/Whats-App-Image-2025-10-21-at-00-40-47-40edd2b7.jpg" alt="Admin 1" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
-                                <h4 class="text-xl font-bold">Abdelrahman Ashraf</h4>
-                            </div>
-                            <div>
-                                <img src="https://i.postimg.cc/jqwXFQMw/Whats-App-Image-2025-09-22-at-17-00-48-c9f0bfb6.jpg" alt="Admin 2" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
-                                <h4 class="text-xl font-bold">Tasbeeh Mahmoud</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-bg border border-gray-700 rounded-xl p-6">
-                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee) ⚖️</h3>
-                    <div class="space-y-6">
-                        <div class="text-center">
-                             <img src="https://i.postimg.cc/m2k8yyCq/Whats-App-Image-2025-10-20-at-22-40-41-e61d66c3.jpg" alt="DR. Ahmed Mahmoud" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold">DR. Ahmed Mahmoud</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                         <div class="text-center">
-                             <img src="https://i.postimg.cc/gjXLnjL4/Whats-App-Image-2025-10-20-at-23-17-49-ff5ebfed.jpg" alt="DR. Islam Yassin" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold">DR. Islam Yassin</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                         <div class="text-center">
-                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold">DR. [Third Doctor's Name]</h4>
-                             <p class="text-gray-400">[نبذة تعريفية قصيرة عن الدكتور وخبراته]</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 pt-8 border-t border-gray-700 text-center">
-                 <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
-                 <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
-                 <a href="#" target="_blank" class="inline-block bg-electric-blue text-gray-900 font-extrabold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
-                    سجل فريقك الآن!
-                </a>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
