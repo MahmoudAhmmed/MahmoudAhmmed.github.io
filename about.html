@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
             background-color: #1a1a1d;
@@ -15,21 +18,31 @@
             font-family: 'Cairo', sans-serif;
             overflow-x: hidden;
         }
+
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
-        .text-electric-blue { color: #00ffff; }
-        .text-vibrant-magenta { color: #ff00ff; }
+
+        .text-electric-blue {
+            color: #00ffff;
+        }
+
+        .text-vibrant-magenta {
+            color: #ff00ff;
+        }
+
         .neon-shadow-blue {
             text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
         }
+
         .card-bg {
-             background-color: rgba(44, 44, 52, 0.4);
-             backdrop-filter: blur(10px);
-             -webkit-backdrop-filter: blur(10px);
-             border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(44, 44, 52, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-       /* No longer needed .footer-logo-blend {
+
+        /* No longer needed .footer-logo-blend {
             mix-blend-mode: screen;
             filter: saturate(0.5);
             transition: all 0.3s ease;
@@ -40,25 +53,42 @@
         } */
         /* Animation for content fade-in */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .fade-in-section {
             animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
+
 <body class="bg-[#1a1a1d] flex flex-col min-h-screen">
 
-    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10"
+        style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
 
     <main class="relative z-10 p-6 md:p-8 flex-grow">
-        
+
         <nav class="w-full flex justify-center items-center pb-6 space-x-8 space-x-reverse border-b border-gray-700">
-             <a href="index.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
-             <a href="entertainment.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الفقرات الترفيهية</a>
-             <a href="competition.html" class="text-lg font-bold text-gray-300 hover:text-vibrant-magenta transition-colors duration-300">مسابقة P.S</a>
-             <a href="about.html" class="text-lg font-bold text-electric-blue transition-colors duration-300">من نحن ؟</a>
+            <a href="index.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
+            <a href="entertainment.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الفقرات
+                الترفيهية</a>
+            <a href="competition.html"
+                class="text-lg font-bold text-gray-300 hover:text-vibrant-magenta transition-colors duration-300">مسابقة
+                P.S</a>
+            <a href="about.html" class="text-lg font-bold text-electric-blue transition-colors duration-300">من نحن
+                ؟</a>
         </nav>
 
         <div class="max-w-4xl mx-auto mt-12">
@@ -69,43 +99,58 @@
 
             <section class="mt-12 fade-in-section" style="animation-delay: 0.2s;">
                 <div class="rounded-xl overflow-hidden shadow-lg" style="box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);">
-                    <img src="https://i.postimg.cc/ZKkzhZXb/IMG-1398.jpg" alt="فريق أسرة NASA" class="w-full h-auto object-cover">
+                    <img src="assets/Pictures/all.jpg" alt="فريق أسرة NASA" class="w-full h-auto object-cover">
                 </div>
             </section>
 
             <section class="mt-12 card-bg rounded-xl p-8 fade-in-section" style="animation-delay: 0.4s;">
-                <h2 class="text-3xl font-bold text-white mb-4">نحن أسرة <span class="text-vibrant-magenta">NASA</span></h2>
+                <h2 class="text-3xl font-bold text-white mb-4">نحن أسرة <span class="text-vibrant-magenta">NASA</span>
+                </h2>
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    النشاط الطلابي النابض بالحياة في كلية العلوم بجامعة حلوان. نتكون من مجموعة من اللجان المتخصصة، التي تعمل معًا لإثراء الحياة الطلابية وتنمية مهارات زملائنا في مختلف المجالات.
+                    النشاط الطلابي النابض بالحياة في كلية العلوم بجامعة حلوان. نتكون من مجموعة من اللجان المتخصصة، التي
+                    تعمل معًا لإثراء الحياة الطلابية وتنمية مهارات زملائنا في مختلف المجالات.
                 </p>
             </section>
 
             <section class="mt-8 card-bg rounded-xl p-8 fade-in-section" style="animation-delay: 0.6s;">
                 <h2 class="text-3xl font-bold text-electric-blue mb-6">لجنة البرمجة: العقل المحرك للإبداع التقني</h2>
                 <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                    في قلب أسرة NASA، تبرز لجنة البرمجة كفريق من الطلاب الشغوفين بعالم الأكواد والتكنولوجيا. مهمتنا الأساسية هي نشر ثقافة البرمجة داخل الكلية وتمكين زملائنا المهتمين بالتقنية. نقوم بذلك من خلال:
+                    في قلب أسرة NASA، تبرز لجنة البرمجة كفريق من الطلاب الشغوفين بعالم الأكواد والتكنولوجيا. مهمتنا
+                    الأساسية هي نشر ثقافة البرمجة داخل الكلية وتمكين زملائنا المهتمين بالتقنية. نقوم بذلك من خلال:
                 </p>
                 <ul class="space-y-4 text-lg">
-                    <li class="flex items-start"><span class="text-2xl ml-4">👩‍💻</span><span class="text-gray-200"><b>تقديم ورش عمل ودورات تدريبية:</b> حيث نعلم الطلاب أساسيات ومستويات متقدمة في مجالات حيوية مثل Python، تطوير تطبيقات الموبايل، وتطوير الواجهات الأمامية.</span></li>
-                    <li class="flex items-start"><span class="text-2xl ml-4">💡</span><span class="text-gray-200"><b>تنظيم الفعاليات:</b> نحن مسؤولون عن تصميم وتنظيم فعاليات برمجية مبتكرة، تهدف إلى تطبيق المعرفة النظرية وخلق جو من التحدي والمرح.</span></li>
-                    <li class="flex items-start"><span class="text-2xl ml-4">🤝</span><span class="text-gray-200"><b>بناء مجتمع المبرمجين:</b> نسعى لإنشاء وتنمية مجتمع قوي للمبرمجين داخل كلية العلوم، لتبادل الخبرات، الدعم المتبادل، ومواكبة كل ما هو جديد.</span></li>
+                    <li class="flex items-start"><span class="text-2xl ml-4">👩‍💻</span><span
+                            class="text-gray-200"><b>تقديم ورش عمل ودورات تدريبية:</b> حيث نعلم الطلاب أساسيات ومستويات
+                            متقدمة في مجالات حيوية مثل Python، تطوير تطبيقات الموبايل، وتطوير الواجهات الأمامية.</span>
+                    </li>
+                    <li class="flex items-start"><span class="text-2xl ml-4">💡</span><span
+                            class="text-gray-200"><b>تنظيم الفعاليات:</b> نحن مسؤولون عن تصميم وتنظيم فعاليات برمجية
+                            مبتكرة، تهدف إلى تطبيق المعرفة النظرية وخلق جو من التحدي والمرح.</span></li>
+                    <li class="flex items-start"><span class="text-2xl ml-4">🤝</span><span
+                            class="text-gray-200"><b>بناء مجتمع المبرمجين:</b> نسعى لإنشاء وتنمية مجتمع قوي للمبرمجين
+                            داخل كلية العلوم، لتبادل الخبرات، الدعم المتبادل، ومواكبة كل ما هو جديد.</span></li>
                 </ul>
             </section>
 
             <section class="mt-8 card-bg rounded-xl p-8 fade-in-section" style="animation-delay: 0.8s;">
                 <h2 class="text-3xl font-bold text-vibrant-magenta mb-4">مبادرتنا: فعالية CTX</h2>
                 <p class="text-lg text-gray-300 leading-relaxed">
-                    تعتبر فعالية CTX "Execute Your Potential" هي أحدث مبادراتنا الطموحة. هدفنا من خلالها هو كسر الحاجز بين الطلاب وعالم البرمجة، عبر دمج الفقرات البرمجية الترفيهية التفاعلية مع التحدي الفكري لمسابقة Problem Solving التنافسية.
+                    تعتبر فعالية CTX "Execute Your Potential" هي أحدث مبادراتنا الطموحة. هدفنا من خلالها هو كسر الحاجز
+                    بين الطلاب وعالم البرمجة، عبر دمج الفقرات البرمجية الترفيهية التفاعلية مع التحدي الفكري لمسابقة
+                    Problem Solving التنافسية.
                 </p>
             </section>
         </div>
     </main>
 
-    <footer class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
+    <footer
+        class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
         <div class="max-w-2xl mx-auto">
             <div class="flex justify-center items-center gap-10 md:gap-16">
-                 <img src="https://i.postimg.cc/5y9ysnst/photo-2025-10-21-13-03-55.jpg" alt="NASA Family Logo" class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
-                <img src="https://i.postimg.cc/J44Hx4Fj/Copy-of-Untitled-Design.jpg" alt="Programming Committee Logo" class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
+                <img src="assets/logos/nasalogo.png" alt="NASA Family Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
+                <img src="assets/logos/indexlogo.png" alt="Programming Committee Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
             </div>
             <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500">
                 <p>تنظيم: أسرة NASA - كلية العلوم</p>
@@ -115,4 +160,5 @@
     </footer>
 
 </body>
+
 </html>

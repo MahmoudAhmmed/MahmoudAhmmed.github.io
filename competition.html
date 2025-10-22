@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
     <style>
         body {
             background-color: #1a1a1d;
@@ -15,22 +18,38 @@
             font-family: 'Cairo', sans-serif;
             overflow-x: hidden;
         }
+
         .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
-        .text-electric-blue { color: #00ffff; }
-        .bg-electric-blue { background-color: #00ffff; }
-        .text-vibrant-magenta { color: #ff00ff; }
-        .text-neon-green { color: #39ff14; }
+
+        .text-electric-blue {
+            color: #00ffff;
+        }
+
+        .bg-electric-blue {
+            background-color: #00ffff;
+        }
+
+        .text-vibrant-magenta {
+            color: #ff00ff;
+        }
+
+        .text-neon-green {
+            color: #39ff14;
+        }
+
         .neon-shadow-magenta {
             text-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff, 0 0 12px #ff00ff;
         }
+
         .card-bg {
-             background-color: rgba(44, 44, 52, 0.4);
-             backdrop-filter: blur(10px);
-             -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(44, 44, 52, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
         }
-       /* No longer needed .footer-logo-blend {
+
+        /* No longer needed .footer-logo-blend {
             mix-blend-mode: screen;
             filter: saturate(0.5);
             transition: all 0.3s ease;
@@ -41,43 +60,58 @@
         } */
     </style>
 </head>
+
 <body class="bg-[#1a1a1d] flex flex-col min-h-screen">
 
-    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10" style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10"
+        style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
 
     <main class="relative z-10 p-6 md:p-8 flex-grow">
-        
+
         <nav class="w-full flex justify-center items-center pb-6 space-x-8 space-x-reverse border-b border-gray-700">
-             <a href="index.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
-             <a href="entertainment.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الفقرات الترفيهية</a>
-             <a href="competition.html" class="text-lg font-bold text-vibrant-magenta transition-colors duration-300">مسابقة P.S</a>
-             <a href="about.html" class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">من نحن ؟</a>
+            <a href="index.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
+            <a href="entertainment.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الفقرات
+                الترفيهية</a>
+            <a href="competition.html"
+                class="text-lg font-bold text-vibrant-magenta transition-colors duration-300">مسابقة P.S</a>
+            <a href="about.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">من نحن
+                ؟</a>
         </nav>
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-8 text-vibrant-magenta neon-shadow-magenta">🏆 مسابقة Problem Solving 🏆</h2>
-            
-            <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg" style="box-shadow: 0 0 10px #39ff14;">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-8 text-vibrant-magenta neon-shadow-magenta">🏆
+                مسابقة Problem Solving 🏆</h2>
+
+            <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg"
+                style="box-shadow: 0 0 10px #39ff14;">
                 <p class="text-lg md:text-xl font-bold text-neon-green">
                     ⚠️ هذه المسابقة مخصصة لطلاب كلية العلوم بجامعة حلوان فقط! ⚠️
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                
+
                 <div class="card-bg border border-gray-700 rounded-xl p-6 lg:col-span-2">
-                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee) ⚖️</h3>
+                    <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee)
+                        ⚖️</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div class="text-center">
-                             <img src="https://i.postimg.cc/m2k8yyCq/Whats-App-Image-2025-10-20-at-22-40-41-e61d66c3.jpg" alt="DR. Ahmed Mahmoud" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold mt-4">DR. Ahmed Mahmoud</h4>
+                            <img src="assets/Pictures/bebo.jpg" alt="DR. Ahmed Mahmoud"
+                                class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
+                            <h4 class="text-xl font-bold mt-4">DR. Ahmed Mahmoud</h4>
                         </div>
-                         <div class="text-center">
-                             <img src="https://i.postimg.cc/gjXLnjL4/Whats-App-Image-2025-10-20-at-23-17-49-ff5ebfed.jpg" alt="DR. Islam Yassin" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
-                             <h4 class="text-xl font-bold mt-4">DR. Islam Yassin</h4>
+                        <div class="text-center">
+                            <img src="assets/Pictures/eslam.jpg" alt="DR. Islam Yassin"
+                                class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
+                            <h4 class="text-xl font-bold mt-4">DR. Islam Yassin</h4>
                         </div>
-                         <div class="text-center">
-                             <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
-                             <h4 class="text-xl font-bold mt-4">DR. [Third Doctor's Name]</h4>
+                        <div class="text-center">
+                            <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3"
+                                class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
+                            <h4 class="text-xl font-bold mt-4">DR. [Third Doctor's Name]</h4>
                         </div>
                     </div>
                 </div>
@@ -86,46 +120,63 @@
                     <div>
                         <h3 class="text-2xl font-bold text-electric-blue mb-4">قواعد وتفاصيل المسابقة</h3>
                         <ul class="space-y-3 text-lg text-gray-200">
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span> <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span> <span><b>الهوية:</b> ID مخصص لكل مشارك وكل فريق بلون مميز.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span> <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span> <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span></li>
-                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span> <span><b>الزمن:</b> ساعة واحدة فقط!</span></li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">👥</span>
+                                <span><b>الفرق:</b> 4 فرق، كل فريق يتكون من 3 إلى 5 أفراد.</span>
+                            </li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">🆔</span>
+                                <span><b>الهوية:</b> ID مخصص لكل مشارك وكل فريق بلون مميز.</span>
+                            </li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">📍</span>
+                                <span><b>المكان:</b> قاعة المعيدين بمبنى قسم الرياضيات.</span>
+                            </li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">❓</span>
+                                <span><b>الأسئلة:</b> 4 أسئلة برمجية تتحدى قدراتك.</span>
+                            </li>
+                            <li class="flex items-start"><span class="text-electric-blue ml-3 text-2xl">⏱️</span>
+                                <span><b>الزمن:</b> ساعة واحدة فقط!</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-12 pt-8 border-t border-gray-700">
                 <h3 class="text-2xl font-bold text-electric-blue mb-8 text-center">فريق العمل (The Crew) 🚀</h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center items-start">
                     <div>
-                        <img src="https://i.postimg.cc/t4S1wtFx/Whats-App-Image-2025-10-21-at-20-52-46-db94a535.jpg" alt="Mahmoud Ahmed" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-neon-green object-cover">
+                        <img src="assets/Pictures/mah.jpg" alt="Mahmoud Ahmed"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-neon-green object-cover">
                         <h4 class="text-lg font-bold mt-4">Mahmoud Ahmed</h4>
                         <p class="text-gray-400 text-sm">(Supervisor)</p>
                     </div>
-                     <div>
-                        <img src="https://i.postimg.cc/HxJktKWx/Whats-App-Image-2025-10-21-at-00-40-47-40edd2b7.jpg" alt="Abdelrahman Ashraf" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
+                    <div>
+                        <img src="assets/Pictures/abdou.jpg" alt="Abdelrahman Ashraf"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
                         <h4 class="text-lg font-bold mt-4">Abdelrahman Ashraf</h4>
                         <p class="text-gray-400 text-sm">(Admin)</p>
                     </div>
-                     <div>
-                        <img src="https://i.postimg.cc/jqwXFQMw/Whats-App-Image-2025-09-22-at-17-00-48-c9f0bfb6.jpg" alt="Tasbeeh Mahmoud" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
+                    <div>
+                        <img src="assets/Pictures/tasbeeh.jpg
+                        " alt="Tasbeeh Mahmoud"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
                         <h4 class="text-lg font-bold mt-4">Tasbeeh Mahmoud</h4>
                         <p class="text-gray-400 text-sm">(Admin)</p>
                     </div>
-                     <div>
-                        <img src="https://i.postimg.cc/jdCYvHdJ/Whats-App-Image-2025-09-22-at-17-58-30-a3f9fc22.jpg" alt="Ali Amr" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
+                    <div>
+                        <img src="assets/Pictures/ali.jpg" alt="Ali Amr"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
                         <h4 class="text-lg font-bold mt-4">Ali Amr</h4>
                         <p class="text-gray-400 text-sm">(Organizer)</p>
                     </div>
-                     <div>
-                        <img src="https://i.postimg.cc/8PqKgMD0/Whats-App-Image-2025-10-21-at-21-22-01-54caddf3.jpg" alt="Amina Samy" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
+                    <div>
+                        <img src="assets/Pictures/amina2.jpg" alt="Amina Samy"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
                         <h4 class="text-lg font-bold mt-4">Amina Samy</h4>
                         <p class="text-gray-400 text-sm">(Organizer)</p>
                     </div>
-                     <div>
-                        <img src="https://i.postimg.cc/przG1L7m/Whats-App-Image-2025-09-22-at-19-19-49-9c727a56.jpg" alt="Yasser Ayoup" class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
+                    <div>
+                        <img src="assets/Pictures/yasser.jpg" alt="Yasser Ayoup"
+                            class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-gray-500 object-cover">
                         <h4 class="text-lg font-bold mt-4">Yasser Ayoup</h4>
                         <p class="text-gray-400 text-sm">(Organizer)</p>
                     </div>
@@ -134,20 +185,25 @@
 
 
             <div class="mt-12 pt-8 border-t border-gray-700 text-center">
-                 <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
-                 <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
-                 <a href="https://forms.gle/dwvmoWZ1r8z5Czt98" target="_blank" class="inline-block bg-electric-blue text-gray-900 font-extrabold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg" style="box-shadow: 0 0 15px #00ffff;">
+                <h3 class="text-2xl font-bold text-white mb-4">هل تملك فريقًا مستعدًا للمنافسة؟</h3>
+                <p class="text-gray-300 mb-6">إذا كنت ترغب في المشاركة بالمسابقة، يمكنك التسجيل من هنا!</p>
+                <a href="https://forms.gle/dwvmoWZ1r8z5Czt98" target="_blank"
+                    class="inline-block bg-electric-blue text-gray-900 font-extrabold text-lg px-10 py-4 rounded-lg transition-transform duration-300 transform hover:scale-105 shadow-lg"
+                    style="box-shadow: 0 0 15px #00ffff;">
                     سجل فريقك الآن!
                 </a>
             </div>
         </div>
     </main>
 
-    <footer class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
+    <footer
+        class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
         <div class="max-w-2xl mx-auto">
             <div class="flex justify-center items-center gap-10 md:gap-16">
-                 <img src="https://i.postimg.cc/5y9ysnst/photo-2025-10-21-13-03-55.jpg" alt="NASA Family Logo" class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
-                <img src="https://i.postimg.cc/J44Hx4Fj/Copy-of-Untitled-Design.jpg" alt="Programming Committee Logo" class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
+                <img src="assets/logos/nasalogo.png" alt="NASA Family Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
+                <img src="assets/logos/indexlogo.png" alt="Programming Committee Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
             </div>
             <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500">
                 <p>تنظيم: أسرة NASA - كلية العلوم</p>
@@ -156,4 +212,5 @@
         </div>
     </footer>
 </body>
+
 </html>
