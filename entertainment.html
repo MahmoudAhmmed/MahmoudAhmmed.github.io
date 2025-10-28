@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTX - الفقرات الترفيهية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1d;
+            color: #f0f0f0;
+            font-family: 'Cairo', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-orbitron {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .text-electric-blue {
+            color: #00ffff;
+        }
+
+        .text-vibrant-magenta {
+            color: #ff00ff;
+        }
+
+        .text-neon-green {
+            color: #39ff14;
+        }
+
+        .neon-shadow-blue {
+            text-shadow: 0 0 3px #00ffff, 0 0 6px #00ffff, 0 0 12px #00ffff;
+        }
+
+        .card-bg {
+            background-color: rgba(44, 44, 52, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* No longer needed .footer-logo-blend {
+            mix-blend-mode: screen;
+            filter: saturate(0.5);
+            transition: all 0.3s ease;
+        }
+        .footer-logo-blend:hover {
+            filter: saturate(1);
+            transform: scale(1.05);
+        } */
+    </style>
+</head>
+
+<body class="bg-[#1a1a1d] flex flex-col min-h-screen">
+
+    <div class="absolute top-0 left-0 w-full h-full bg-grid opacity-10"
+        style="background-image: linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 30px 30px;">
+    </div>
+
+    <main class="relative z-10 p-6 md:p-8 flex-grow">
+
+        <nav class="w-full flex justify-center items-center pb-6 space-x-8 space-x-reverse border-b border-gray-700">
+            <a href="index.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">الرئيسية</a>
+            <a href="entertainment.html"
+                class="text-lg font-bold text-electric-blue transition-colors duration-300">الفقرات الترفيهية</a>
+            <a href="competition.html"
+                class="text-lg font-bold text-gray-300 hover:text-vibrant-magenta transition-colors duration-300">مسابقة
+                P.S</a>
+            <a href="about.html"
+                class="text-lg font-bold text-gray-300 hover:text-electric-blue transition-colors duration-300">من نحن
+                ؟</a>
+        </nav>
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-12 text-electric-blue neon-shadow-blue">🎮
+                الفقرات الترفيهية 🎮</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Dev Genius 🤓</h3>
+                    <p class="text-gray-300 mb-3">لو بتحب الأسئلة السريعة وروح المنافسة، الفقرة دي معمولة ليك! مجموعة من
+                        التحديات بين المشاركين… واللي يجاوب أسرع ويجمع أكتر نقاط هو الـ Dev Genius الحقيقي! 👑</p>
+                    <p class="font-bold text-neon-green">🔥 صاحب المركز الأول ليه جايزة قيمة!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Logo Error 🧐</h3>
+                    <p class="text-gray-300 mb-3">فاكر نفسك عندك ذاكرة قوية؟ وبتلاحظ التفاصيل الصغيرة🤔؟ في Logo Error،
+                        هنختبر قوة ملاحظتك! هنعرض لك لوجوهات مشهورة لمواقع برمجيه… لكن فيها خطأ بسيط! تقدر تكتشف
+                        الخطأ😏؟</p>
+                    <p class="font-bold text-neon-green">🔥 اللي هيلاحظه أول، هو اللي هيكسب!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Error Party 🥳</h3>
+                    <p class="text-gray-300 mb-3">شايف نفسك Coder شاطر؟ تعال نختبر مهارتك! هنعرض لك كود شكله تمام… لكن
+                        فيه غلطة صغيرة! هل تقدر تكتشفها قبل الكل؟ 😏</p>
+                    <p class="font-bold text-neon-green">🔥✨ اللي هيحلها أسرع، ليه نقطة… وجايزة كمان!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Emoji Code 🎬</h3>
+                    <p class="text-gray-300 mb-3"> بتحب الأفلام والبرمجة؟ 🍿 طب إيه رأيك لو دمجناهم؟ الفقرة دي اختبار لقوة ملاحظتك... 
+                        هنعرضلك كود برمجي غامض 🕵️‍♂️ بيوصف أو بيدي "هينت" عن فيلم مشهور. مهمتك تفك شفرة الكود وتعرف اسم الفيلم! 🤔 </p>
+                    <p class="font-bold text-neon-green">🎁 فك الشفرة صح.. والـ Mystery Box مستنياك بجوايز كتير!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Card game 🃏</h3>
+                    <p class="text-gray-300 mb-3">جاهز لاختبار سريع في معلوماتك البرمجية؟ ⚡
+                        الفقرة دي عن السرعة والدقة! هنسحب كروت عليها أسئلة برمجية خفيفة وسريعة 👨‍💻، والمطلوب منك تلقط الإجابة الصح في أقل وقت ممكن. ركز كويس وخليك أسرع واحد!</p>
+                    <p class="font-bold text-neon-green">🎁 جاوب أسرع.. وخليك جاهز تختار جايزتك بنفسك من الـ Mystery Box!</p>
+                </div>
+                <div class="card-bg border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-2xl font-bold text-vibrant-magenta mb-3">Match The Icon 🧩</h3>
+                    <p class="text-gray-300 mb-3">عندك ذاكرة فوتوغرافية؟ 📸 الفقرة دي هتختبر قوة ذاكرتك وسرعة بديهتك في البرمجة! ⚡
+                        قدامك مجموعة كروت مقلوبة... لوجوهات وأوصاف 🧑‍💻👩‍💻. التحدي إنك تفتكر مكان كل كارت وتطابق اللوجو بالوصف بتاعه أسرع من منافسك!</p>
+                    <p class="font-bold text-neon-green">🎁 صاحب الذاكرة الأقوى هو اللي هيكسب... والـ Mystery Box في انتظاره!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer
+        class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
+        <div class="max-w-2xl mx-auto">
+            <div class="flex justify-center items-center gap-10 md:gap-16">
+                <img src="assets/logos/nasalogo.png" alt="NASA Family Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
+                <img src="assets/logos/indexlogo.png" alt="Programming Committee Logo"
+                    class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500">
+                <p>تنظيم: أسرة NASA - كلية العلوم</p>
+                <p class="mt-2 text-sm">&copy; 2025 CTX Event. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
