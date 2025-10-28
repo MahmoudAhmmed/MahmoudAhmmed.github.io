@@ -32,16 +32,22 @@
         }
 
         .text-vibrant-magenta {
-            color: #ff00ff;
+            color: #ff00ff; /* (اللون الفاقع الأصلي) */
         }
 
         .text-neon-green {
             color: #39ff14;
         }
 
+        /* --- التعديل الاحترافي: تقليل السطوع --- */
         .neon-shadow-magenta {
-            text-shadow: 0 0 3px #ff00ff, 0 0 6px #ff00ff, 0 0 12px #ff00ff;
+            /* استخدام (rgba) لتقليل سطوع التوهج
+               (نفس اللون، لكن بشفافية 60% و 40%)
+            */
+            text-shadow: 0 0 8px rgba(255, 0, 255, 0.6), 0 0 12px rgba(255, 0, 255, 0.4);
         }
+        /* --- نهاية التعديل --- */
+
 
         .card-bg {
             background-color: rgba(44, 44, 52, 0.4);
@@ -82,7 +88,14 @@
                 ؟</a>
         </nav>
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-8 text-vibrant-magenta neon-shadow-magenta">🏆
+            
+            <!-- 
+                التعديل هنا: 
+                أرجعنا "text-vibrant-magenta"
+                واستخدمنا "neon-shadow-magenta" (التي تم تعديلها في الـ CSS)
+                وأضفنا "text-opacity-90" لتهدئة النص نفسه قليلاً
+            -->
+            <h2 class="text-3xl md:text-5xl font-bold text-center mt-8 mb-8 text-vibrant-magenta neon-shadow-magenta text-opacity-90">🏆
                 مسابقة Problem Solving 🏆</h2>
 
             <div class="max-w-3xl mx-auto mb-8 text-center border-2 border-neon-green rounded-xl p-4 bg-gray-800 bg-opacity-50 shadow-lg"
@@ -98,6 +111,8 @@
                     <h3 class="text-2xl font-bold text-electric-blue mb-6 text-center">لجنة التحكيم (Judging Committee)
                         ⚖️</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        
+                        <!-- التعديل: استبدال الصور المحلية بـ Placeholders للمعاينة -->
                         <div class="text-center">
                             <img src="assets/Pictures/bebo.jpg" alt="DR. Ahmed Mahmoud"
                                 class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue object-cover">
@@ -109,7 +124,7 @@
                             <h4 class="text-xl font-bold mt-4">DR. Islam Yassin</h4>
                         </div>
                         <div class="text-center">
-                            <img src="https://placehold.co/200x200/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3"
+                            <img src="https://placehold.co/128x128/2a2a2e/eeeeee?text=صورة+الدكتور" alt="Referee 3"
                                 class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-electric-blue">
                             <h4 class="text-xl font-bold mt-4">DR. [Third Doctor's Name]</h4>
                         </div>
@@ -143,6 +158,8 @@
             <div class="mt-12 pt-8 border-t border-gray-700">
                 <h3 class="text-2xl font-bold text-electric-blue mb-8 text-center">فريق العمل (The Crew) 🚀</h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center items-start">
+                    
+                    <!-- التعديل: استبدال الصور المحلية بـ Placeholders للمعاينة -->
                     <div>
                         <img src="assets/Pictures/mah.jpg" alt="Mahmoud Ahmed"
                             class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-neon-green object-cover">
@@ -156,8 +173,7 @@
                         <p class="text-gray-400 text-sm">(Admin)</p>
                     </div>
                     <div>
-                        <img src="assets/Pictures/tasbeeh.jpg
-                        " alt="Tasbeeh Mahmoud"
+                        <img src="assets/Pictures/tasbeeh.jpg" alt="Tasbeeh Mahmoud"
                             class="w-32 h-32 rounded-full mx-auto mb-2 border-2 border-vibrant-magenta object-cover">
                         <h4 class="text-lg font-bold mt-4">Tasbeeh Mahmoud</h4>
                         <p class="text-gray-400 text-sm">(Admin)</p>
@@ -200,9 +216,10 @@
         class="relative z-10 mt-auto py-10 px-4 sm:px-6 lg:px-8 text-center bg-black bg-opacity-20 border-t border-gray-800">
         <div class="max-w-2xl mx-auto">
             <div class="flex justify-center items-center gap-10 md:gap-16">
-                <img src="assets/logos/nasalogo.png" alt="NASA Family Logo"
+                <!-- التعديل: استبدال الصور المحلية بـ Placeholders للمعاينة -->
+                <img src="https://placehold.co/100x64/1a1a1d/00ffff?text=NASA+Logo" alt="NASA Family Logo"
                     class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="أسرة NASA">
-                <img src="assets/logos/indexlogo.png" alt="Programming Committee Logo"
+                <img src="https://placehold.co/100x64/1a1a1d/ff00ff?text=CTX+Logo" alt="Programming Committee Logo"
                     class="h-16 rounded-lg transition-transform duration-300 hover:scale-105" title="لجنة البرمجة">
             </div>
             <div class="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500">
@@ -214,3 +231,4 @@
 </body>
 
 </html>
+
